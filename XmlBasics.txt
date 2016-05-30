@@ -1,0 +1,48 @@
+XML stands for EXtensible Markup Language.
+	* XML was designed to store and transport data
+	* Configure Application 
+	* XML was designed to be both human- and machine-readable.
+	
+Rules 
+	* XML Documents Must Have a Root Element
+	* The XML prolog is optional. If it exists, it must come first in the document.
+		<?xml version="1.0" encoding="UTF-8"?>
+	* All XML Elements Must Have a Closing Tag
+	* XML Elements Must be Properly Nested
+	* XML Attribute Values Must be Quoted
+		<note date="12/11/2007">
+	* Entity References , to avoid this error, replace the "<" character with an entity reference:
+		<message>salary < 1000</message> ==> <message>salary &lt; 1000</message>
+	* Comments in XML ,(Two dashes in the middle of a comment are not allowed.)
+		<!-- This is a  comment -->
+XML Namespaces
+	* Solves the Name Conflict Using a Prefix
+		*1st 
+			<h:table xmlns:h="http://www.w3.org/TR/html4/">
+			  <h:tr>
+				<h:td>Apples</h:td>
+				<h:td>Bananas</h:td>
+			  </h:tr>
+			</h:table>
+		*2nd 
+			xmlns:h="http://www.w3.org/TR/html4/"
+			xmlns:f="http://www.w3schools.com/furniture">
+			<h:table>
+			  <h:tr>
+				<h:td>Apples</h:td>
+				<h:td>Bananas</h:td>
+			  </h:tr>
+			</h:table>
+		* 3rd Default Namespaces , xmlns="namespaceURI"
+			<table xmlns="http://www.w3.org/TR/html4/">
+			  <tr>
+				<td>Apples</td>
+				<td>Bananas</td>
+			  </tr>
+			</table>
+Grammer
+	* Structure -> DTD document type definition 
+	* Content -> Schema
+		Schema can be use for both Structure and Content grammer.
+		But DTD can only use for Structure declaration 
+					
